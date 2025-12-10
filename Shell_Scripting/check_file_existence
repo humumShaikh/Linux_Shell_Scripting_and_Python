@@ -1,0 +1,21 @@
+#!/bin/bash
+
+echo "Enter the file name : "
+read file
+
+if [ -e "$file" ]
+then
+
+	echo "File named $file does exist"
+	
+	if [ -f "$file" ]
+	then
+	echo "$file is of regular type"
+	elif [ -d "$file" ]
+	then
+	echo "$file is a directory"
+	fi
+
+else
+echo "File named $file doesn't exist"
+fi
